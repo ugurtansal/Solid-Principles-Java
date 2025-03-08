@@ -30,8 +30,12 @@ public class Main {
         //Fourth Principle
 
         System.out.println("\n Fourth Principle --------------------------");
-
         credCard.refund(55.99);
+
+        //Fifth Principle
+        System.out.println("\n Fifth Principle --------------------------");
+        OrderService orderService = new OrderService(payPal);
+        orderService.checkout(198.99);
 
 
 
