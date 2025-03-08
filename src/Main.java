@@ -27,6 +27,13 @@ public class Main {
         payProcess.processPayment(credCard,56.65);
 
 
+        //Fourth Principle
+
+        System.out.println("\n Fourth Principle --------------------------");
+
+        credCard.refund(55.99);
+
+
 
 
 
