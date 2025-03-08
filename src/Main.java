@@ -3,5 +3,10 @@
 public class Main {
     public static void main(String[] args) {
 
+        Order firstOrder=new Order("Mobile Phone",2);
+        InvoicePrinter printer=new InvoicePrinter();
+
+        firstOrder.processOrder();
+        printer.printInvoice(firstOrder);
     }
 }
