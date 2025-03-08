@@ -3,10 +3,34 @@
 public class Main {
     public static void main(String[] args) {
 
+        //First Principle
+        System.out.println("\n First Principle --------------------------");
         Order firstOrder=new Order("Mobile Phone",2);
         InvoicePrinter printer=new InvoicePrinter();
-
         firstOrder.processOrder();
         printer.printInvoice(firstOrder);
+
+        System.out.println("\n Second Principle --------------------------");
+        //Second Principle
+        CreditCardPayment credCard=new CreditCardPayment();
+        PaymentMethod payPal=new PayPalPayment();
+        PaymentMethod cash= new CashPayment();
+        credCard.pay(55.99);
+        payPal.pay(98.75);
+        cash.pay(65.55);
+
+        System.out.println("\n Third Principle --------------------------");
+        //Third Principle
+        PaymentProcessor payProcess=new PaymentProcessor();
+        payProcess.processPayment(cash,56.65);
+        payProcess.processPayment(payPal,56.65);
+        payProcess.processPayment(credCard,56.65);
+
+
+
+
+
+
+
     }
 }
